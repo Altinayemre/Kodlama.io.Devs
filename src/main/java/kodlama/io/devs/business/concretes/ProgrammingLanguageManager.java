@@ -28,20 +28,20 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService {
 
 	@Override
 	public void delete(int id) throws Exception {
-		if (!IsExistId(id)) throw new Exception("İd bulunamadı");
+		if (!IsExistId(id)) throw new Exception("İd bulunamadı!");
 		this.programmingLanguageRepository.delete(id);
 	}
 
 	@Override
 	public void update(ProgrammingLanguage programmingLanguage) throws Exception {
 		IsProgrammingLanguageBlank(programmingLanguage);
-		if (!IsExistId(programmingLanguage.getId())) throw new Exception("İd bulunamadı");
+		if (!IsExistId(programmingLanguage.getId())) throw new Exception("İd bulunamadı!");
 		this.programmingLanguageRepository.update(programmingLanguage);
 	}
 
 	@Override
 	public ProgrammingLanguage getById(int id) throws Exception {
-		if (!IsExistId(id)) throw new Exception("İd bulunamadı");
+		if (!IsExistId(id)) throw new Exception("İd bulunamadı!");
 		return this.programmingLanguageRepository.getById(id);
 	}
 
